@@ -11,16 +11,19 @@
 @implementation TestProjectAppDelegate
 
 @synthesize window;
+@synthesize tabController;
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 
     // Override point for customization after application launch
+	[window addSubview:tabController.view];
     [window makeKeyAndVisible];
 }
 
 
 - (void)dealloc {
+	[tabController release];
     [window release];
     [super dealloc];
 }
