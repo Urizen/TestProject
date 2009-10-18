@@ -10,6 +10,7 @@
 
 
 @implementation TestTableViewController
+@synthesize objects;
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -20,14 +21,19 @@
 }
 */
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	NSArray *array = [[NSArray alloc] initWithObjects:@"one", @"two", @"three", @"four", nil];
+	
+	self.objects = array;
+	
+	[array release];
 }
-*/
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -68,6 +74,7 @@
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
+	self.objects = nil;
 }
 
 
@@ -80,7 +87,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [objects count];
 }
 
 
@@ -88,6 +95,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
+	
+	NSInteger row = [indexPath row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -95,6 +104,7 @@
     }
     
     // Set up the cell...
+	cell.textLabel.text = [objects objectAtIndex:row];
 	
     return cell;
 }
@@ -149,6 +159,7 @@
 
 
 - (void)dealloc {
+	[objects release];
     [super dealloc];
 }
 

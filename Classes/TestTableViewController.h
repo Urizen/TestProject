@@ -11,6 +11,9 @@
 
 @interface TestTableViewController : UITableViewController {
 
+	NSArray *objects;
 }
+
+@property (nonatomic, retain) NSArray *objects;
 
 @end
