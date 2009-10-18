@@ -14,6 +14,9 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		C4372828108B1FEA00E569A1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C4372827108B1FEA00E569A1 /* .gitignore */; };
+		C437283A108B47DA00E569A1 /* 10-medical.png in Resources */ = {isa = PBXBuildFile; fileRef = C4372839108B47DA00E569A1 /* 10-medical.png */; };
+		C437283C108B47E800E569A1 /* 09-chat2.png in Resources */ = {isa = PBXBuildFile; fileRef = C437283B108B47E800E569A1 /* 09-chat2.png */; };
+		C4372865108B4B3800E569A1 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4372864108B4B3800E569A1 /* TestTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,10 @@
 		32CA4F630368D1EE00C91783 /* TestProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProject_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TestProject-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestProject-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C4372827108B1FEA00E569A1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C4372839108B47DA00E569A1 /* 10-medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-medical.png"; sourceTree = "<group>"; };
+		C437283B108B47E800E569A1 /* 09-chat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-chat2.png"; sourceTree = "<group>"; };
+		C4372863108B4B3800E569A1 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		C4372864108B4B3800E569A1 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C4372862108B4B1600E569A1 /* Table View Controller */,
 				1D3623240D0F684500981E51 /* TestProjectAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TestProjectAppDelegate.m */,
 			);
@@ -86,6 +94,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4372866108B4B4600E569A1 /* Table Views */,
+				C4372861108B4AFB00E569A1 /* New Group */,
+				C437282E108B47C800E569A1 /* icons */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TestProject-Info.plist */,
 			);
@@ -100,6 +111,38 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C437282E108B47C800E569A1 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				C437283B108B47E800E569A1 /* 09-chat2.png */,
+				C4372839108B47DA00E569A1 /* 10-medical.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		C4372861108B4AFB00E569A1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		C4372862108B4B1600E569A1 /* Table View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4372863108B4B3800E569A1 /* TestTableViewController.h */,
+				C4372864108B4B3800E569A1 /* TestTableViewController.m */,
+			);
+			name = "Table View Controller";
+			sourceTree = "<group>";
+		};
+		C4372866108B4B4600E569A1 /* Table Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Table Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +189,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				C4372828108B1FEA00E569A1 /* .gitignore in Resources */,
+				C437283A108B47DA00E569A1 /* 10-medical.png in Resources */,
+				C437283C108B47E800E569A1 /* 09-chat2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +203,7 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* TestProjectAppDelegate.m in Sources */,
+				C4372865108B4B3800E569A1 /* TestTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
